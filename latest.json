@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-06T06:44:16.093391",
+    "last_updated": "2026-05-06T09:10:54.437521",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -315,7 +315,7 @@
         "stream_2": {
           "planned_tss_delta": null,
           "hard_sessions_planned": 0,
-          "race_proximity": null,
+          "race_proximity": 32,
           "next_week_load": null,
           "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 0.0
@@ -353,7 +353,7 @@
     "p_max": 978,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-06T06:44:16.092717",
+    "calculation_timestamp": "2026-05-06T09:10:54.436986",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -852,7 +852,19 @@
       "vo2max": null
     }
   ],
-  "planned_workouts": [],
+  "planned_workouts": [
+    {
+      "id": 108541799,
+      "date": "2026-06-07",
+      "name": "Triathlon des Lacs L",
+      "type": "RACE_B",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "description_preview": null
+    }
+  ],
   "workout_summary_stats": {
     "attempted": 0,
     "success": 0,
@@ -870,8 +882,35 @@
     "avg_resting_hr": 50.6
   },
   "race_calendar": {
-    "next_race": null,
-    "all_races": [],
+    "next_race": {
+      "name": "Triathlon des Lacs L",
+      "date": "2026-06-07",
+      "category": "RACE_B",
+      "type": "Ride",
+      "days_until": 32,
+      "moving_time_seconds": null,
+      "distance_meters": null
+    },
+    "all_races": [
+      {
+        "name": "Triathlon des Lacs L",
+        "date": "2026-06-07",
+        "category": "RACE_B",
+        "type": "Ride",
+        "days_until": 32,
+        "moving_time_seconds": null,
+        "distance_meters": null
+      },
+      {
+        "name": "La Marmotte",
+        "date": "2026-06-28",
+        "category": "RACE_B",
+        "type": "Ride",
+        "days_until": 53,
+        "moving_time_seconds": null,
+        "distance_meters": null
+      }
+    ],
     "taper_alert": {
       "active": false
     },
