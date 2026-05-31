@@ -15,21 +15,12 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-30T23:00:57.766585",
+    "last_updated": "2026-05-31T00:13:09.207424",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
   },
   "alerts": [
-    {
-      "metric": "hrv",
-      "value": 51.0,
-      "severity": "warning",
-      "threshold": "\u2193>20% vs baseline (67.6)",
-      "context": "HRV 51.0 is 24.6% below baseline. Monitor \u2014 alarm if persists >2 days.",
-      "persistence_days": 1,
-      "tier": 1
-    },
     {
       "metric": "acwr",
       "value": 0.7,
@@ -38,63 +29,81 @@
       "context": "ACWR 0.7 outside safe range. Injury/overreach risk elevated.",
       "persistence_days": null,
       "tier": 2
+    },
+    {
+      "metric": "race_week",
+      "value": 7,
+      "severity": "info",
+      "threshold": "RACE_B within 7 days",
+      "context": "Race week D-7 of 'Triathlon des Lacs L'. Today: Last key session, 31-42 TSS. 3-5 efforts Z4-Z5 (1-3 min)",
+      "persistence_days": null,
+      "tier": 1
     }
   ],
   "readiness_decision": {
-    "recommendation": "skip",
+    "recommendation": "modify",
     "priority": 2,
     "signals": {
       "hrv": {
-        "status": "red",
-        "value": 51.0,
-        "baseline_7d": 67.6,
-        "delta_pct": -24.6
+        "status": "unavailable",
+        "value": null,
+        "baseline_7d": 67.0,
+        "delta_pct": null
       },
       "rhr": {
-        "status": "amber",
-        "value": 56,
+        "status": "green",
+        "value": 53,
         "baseline_7d": 51.6,
-        "delta_bpm": 4.4
+        "delta_bpm": 1.4
       },
       "sleep": {
-        "status": "red",
-        "hours": 5.38,
-        "quality": 4
+        "status": "unavailable",
+        "hours": null,
+        "quality": null
       },
       "acwr": {
         "status": "amber",
         "value": 0.7
       },
       "ri": {
-        "status": "amber",
-        "value": 0.7
+        "status": "unavailable",
+        "value": null
       },
       "tsb": {
         "status": "green",
-        "value": 4.1
+        "value": 8.3
       }
     },
     "signal_summary": {
-      "green": 1,
-      "amber": 3,
-      "red": 2,
-      "unavailable": 0
+      "green": 2,
+      "amber": 1,
+      "red": 0,
+      "unavailable": 3
     },
     "phase_context": {
       "phase": "Taper",
       "phase_week": 0,
       "amber_threshold": 1,
-      "modifier_applied": "taper_tightened"
+      "modifier_applied": "race_week_tightened"
     },
-    "race_week_defers": false,
-    "modification": null,
-    "reason": "P2 signal count. 2 red (hrv, sleep), 3 amber (rhr, acwr, ri).",
+    "race_week_defers": true,
+    "modification": {
+      "triggers": [
+        "acwr"
+      ],
+      "suggested_adjustments": {
+        "intensity": "reduce",
+        "volume": "reduce",
+        "cap_zone": "Z2"
+      }
+    },
+    "reason": "P2 signal count. 1 amber (acwr) >= threshold 1.",
     "alarm_refs": []
   },
   "history": {
     "available": true,
     "last_generated": "2026-04-20",
-    "age_days": 40,
+    "age_days": 41,
     "total_months": 13,
     "history_confidence": "high"
   },
@@ -138,18 +147,18 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 42.93,
-      "atl": 38.8,
-      "tsb": 4.13,
-      "ramp_rate": -2.42,
+      "ctl": 41.92,
+      "atl": 33.63,
+      "tsb": 8.29,
+      "ramp_rate": -2.36,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
-      "eftp": 241.9,
-      "w_prime": 19989,
+      "eftp": 241.6,
+      "w_prime": 19969,
       "w_prime_kj": 20.0,
-      "p_max": 999,
-      "vo2max": 59.0,
+      "p_max": 998,
+      "vo2max": null,
       "sports": {
         "cycling": {
           "lthr": 186,
@@ -179,21 +188,21 @@
     },
     "current_metrics": {
       "weight_kg": 72.0,
-      "resting_hr": 56,
-      "hrv": 51.0,
-      "sleep_quality": 4,
-      "sleep_hours": 5.38,
-      "sleep_formatted": "5h23m"
+      "resting_hr": 53,
+      "hrv": null,
+      "sleep_quality": null,
+      "sleep_hours": null,
+      "sleep_formatted": null
     }
   },
   "derived_metrics": {
-    "recovery_index": 0.7,
-    "hrv_baseline_7d": 67.6,
+    "recovery_index": null,
+    "hrv_baseline_7d": 67.0,
     "rhr_baseline_7d": 51.6,
-    "hrv_baseline_28d": 71.9,
-    "rhr_baseline_28d": 50.1,
-    "latest_hrv": 51.0,
-    "latest_rhr": 56,
+    "hrv_baseline_28d": 72.4,
+    "rhr_baseline_28d": 50.2,
+    "latest_hrv": null,
+    "latest_rhr": 53,
     "acwr": 0.7,
     "acwr_interpretation": "undertraining",
     "monotony": 0.95,
@@ -205,7 +214,7 @@
     "multi_sport_detected": true,
     "strain": 236.0,
     "stress_tolerance": 2.5,
-    "load_recovery_ratio": 3.5,
+    "load_recovery_ratio": null,
     "tss_7d_total": 248.0,
     "tss_28d_total": 1413.0,
     "zone_distribution_7d": {
@@ -325,7 +334,7 @@
         "stream_2": {
           "planned_tss_delta": null,
           "hard_sessions_planned": 0,
-          "race_proximity": 8,
+          "race_proximity": 7,
           "next_week_load": null,
           "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 0.2
@@ -357,15 +366,15 @@
       "benchmark_percentage": null,
       "seasonal_expected": null
     },
-    "eftp": 241.9,
-    "w_prime": 19989,
+    "eftp": 241.6,
+    "w_prime": 19969,
     "w_prime_kj": 20.0,
-    "p_max": 999,
+    "p_max": 998,
     "power_model_source": "wellness.sportInfo",
-    "vo2max": 59.0,
-    "calculation_timestamp": "2026-05-30T23:00:57.765894",
+    "vo2max": null,
+    "calculation_timestamp": "2026-05-31T00:13:09.206759",
     "data_quality": {
-      "hrv_data_points": 7,
+      "hrv_data_points": 6,
       "rhr_data_points": 7,
       "activities_7d": 8,
       "activities_28d": 42,
@@ -741,22 +750,6 @@
   ],
   "wellness_data": [
     {
-      "date": "2026-05-24",
-      "weight_kg": null,
-      "resting_hr": 53,
-      "hrv_rmssd": 71.0,
-      "hrv_sdnn": null,
-      "sleep_hours": 8.62,
-      "sleep_formatted": "8h37m",
-      "sleep_quality": 3,
-      "sleep_score": 71.0,
-      "mental_energy": null,
-      "fatigue": null,
-      "soreness": null,
-      "avg_sleeping_hr": null,
-      "vo2max": null
-    },
-    {
       "date": "2026-05-25",
       "weight_kg": null,
       "resting_hr": 51,
@@ -851,6 +844,22 @@
       "soreness": null,
       "avg_sleeping_hr": null,
       "vo2max": 59.0
+    },
+    {
+      "date": "2026-05-31",
+      "weight_kg": null,
+      "resting_hr": 53,
+      "hrv_rmssd": null,
+      "hrv_sdnn": null,
+      "sleep_hours": null,
+      "sleep_formatted": null,
+      "sleep_quality": null,
+      "sleep_score": null,
+      "mental_energy": null,
+      "fatigue": null,
+      "soreness": null,
+      "avg_sleeping_hr": null,
+      "vo2max": null
     }
   ],
   "planned_workouts": [
@@ -863,7 +872,7 @@
       "duration_hours": 0.0,
       "duration_formatted": "0s",
       "workout_summary": null,
-      "description_preview": "triathlon L"
+      "description": "triathlon L"
     },
     {
       "id": 108542541,
@@ -890,7 +899,7 @@
     "total_training_formatted": "7h31m",
     "total_tss": 248,
     "activities_count": 8,
-    "avg_hrv": 67.6,
+    "avg_hrv": 67.0,
     "avg_resting_hr": 51.6
   },
   "race_calendar": {
@@ -899,7 +908,7 @@
       "date": "2026-06-07",
       "category": "RACE_B",
       "type": "Other",
-      "days_until": 8,
+      "days_until": 7,
       "moving_time_seconds": null,
       "distance_meters": null
     },
@@ -909,7 +918,7 @@
         "date": "2026-06-07",
         "category": "RACE_B",
         "type": "Other",
-        "days_until": 8,
+        "days_until": 7,
         "moving_time_seconds": null,
         "distance_meters": null
       },
@@ -918,7 +927,7 @@
         "date": "2026-06-28",
         "category": "RACE_B",
         "type": "Ride",
-        "days_until": 29,
+        "days_until": 28,
         "moving_time_seconds": null,
         "distance_meters": null
       }
@@ -927,7 +936,56 @@
       "active": false
     },
     "race_week": {
-      "active": false
+      "active": true,
+      "event_name": "Triathlon des Lacs L",
+      "event_date": "2026-06-07",
+      "event_category": "RACE_B",
+      "event_type": "Other",
+      "event_duration_class": "medium",
+      "event_moving_time_seconds": null,
+      "days_until_event": 7,
+      "current_day": "D-7",
+      "ctl_baseline": 41.9,
+      "normal_weekly_tss": 293.4,
+      "race_week_tss_budget": {
+        "min": 147,
+        "max": 191
+      },
+      "race_week_tss_spent": 0,
+      "race_week_tss_remaining": {
+        "min": 147,
+        "max": 191
+      },
+      "projected_race_day_tsb": 23.1,
+      "tsb_target_range": {
+        "min": 5,
+        "max": 15
+      },
+      "today": {
+        "label": "Last key session",
+        "load_target_tss": {
+          "min": 31,
+          "max": 42
+        },
+        "zones": "3-5 efforts Z4-Z5 (1-3 min)",
+        "purpose": "Fitness confirmation. Verify strong power/HR response."
+      },
+      "carb_loading": {
+        "applicable": false,
+        "active": false,
+        "starts": "D-4",
+        "start_date": "2026-06-03",
+        "note": null
+      },
+      "opener": {
+        "day": "D-2",
+        "date": "2026-06-05",
+        "intensity": "standard"
+      },
+      "go_no_go": {
+        "tsb_status": "green",
+        "notes": []
+      }
     }
   }
 }
