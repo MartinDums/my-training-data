@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-28T23:46:37.788789",
+    "last_updated": "2026-06-29T03:31:38.200231",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -29,24 +29,6 @@
       "context": "ACWR 1.76 outside safe range. Injury/overreach risk elevated.",
       "persistence_days": null,
       "tier": 2
-    },
-    {
-      "metric": "race_week",
-      "value": 0,
-      "severity": "info",
-      "threshold": "RACE_B within 7 days",
-      "context": "Race week D-0 of 'La Marmotte'. Today: Race day, 0-0 TSS. Race effort",
-      "persistence_days": null,
-      "tier": 1
-    },
-    {
-      "metric": "race_week_tsb",
-      "value": -82.2,
-      "severity": "warning",
-      "threshold": "TSB target 5-15",
-      "context": "Projected race-day TSB -82.2 is below target range 5-15. Consider additional rest to reach target.",
-      "persistence_days": null,
-      "tier": 1
     }
   ],
   "readiness_decision": {
@@ -54,42 +36,42 @@
     "priority": 1,
     "signals": {
       "hrv": {
-        "status": "green",
-        "value": 78.0,
-        "baseline_7d": 68.2,
-        "delta_pct": 14.4
+        "status": "unavailable",
+        "value": null,
+        "baseline_7d": 75.6,
+        "delta_pct": null
       },
       "rhr": {
-        "status": "green",
-        "value": 48,
-        "baseline_7d": 47.7,
-        "delta_bpm": 0.3
+        "status": "amber",
+        "value": 51,
+        "baseline_7d": 47.4,
+        "delta_bpm": 3.6
       },
       "sleep": {
-        "status": "amber",
-        "hours": 5.28,
-        "quality": 3
+        "status": "unavailable",
+        "hours": null,
+        "quality": null
       },
       "acwr": {
         "status": "red",
         "value": 1.76
       },
       "ri": {
-        "status": "green",
-        "value": 1.14
+        "status": "unavailable",
+        "value": null
       }
     },
     "signal_summary": {
-      "green": 3,
+      "green": 0,
       "amber": 1,
       "red": 1,
-      "unavailable": 0
+      "unavailable": 3
     },
     "phase_context": {
-      "phase": "Taper",
-      "phase_week": 0,
-      "amber_threshold": 1,
-      "modifier_applied": "race_week_tightened"
+      "phase": "Deload",
+      "phase_week": 2,
+      "amber_threshold": 2,
+      "modifier_applied": "default"
     },
     "race_week_defers": false,
     "modification": null,
@@ -99,7 +81,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-05-31",
-    "age_days": 28,
+    "age_days": 29,
     "total_months": 14,
     "history_confidence": "high"
   },
@@ -125,10 +107,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 62.43,
-      "atl": 144.66,
-      "tsb": -82.23,
-      "ramp_rate": 13.42,
+      "ctl": 60.96,
+      "atl": 125.4,
+      "tsb": -64.44,
+      "ramp_rate": 13.1,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -166,21 +148,21 @@
     },
     "current_metrics": {
       "weight_kg": 72.0,
-      "resting_hr": 48,
-      "hrv": 78.0,
-      "sleep_quality": 3,
-      "sleep_hours": 5.28,
-      "sleep_formatted": "5h17m"
+      "resting_hr": 51,
+      "hrv": null,
+      "sleep_quality": null,
+      "sleep_hours": null,
+      "sleep_formatted": null
     }
   },
   "derived_metrics": {
-    "recovery_index": 1.14,
-    "hrv_baseline_7d": 68.2,
-    "rhr_baseline_7d": 47.7,
-    "hrv_baseline_28d": 73.0,
+    "recovery_index": null,
+    "hrv_baseline_7d": 75.6,
+    "rhr_baseline_7d": 47.4,
+    "hrv_baseline_28d": 73.1,
     "rhr_baseline_28d": 48.1,
-    "latest_hrv": 78.0,
-    "latest_rhr": 48,
+    "latest_hrv": null,
+    "latest_rhr": 51,
     "acwr": 1.76,
     "acwr_interpretation": "danger",
     "monotony": 0.4,
@@ -192,9 +174,9 @@
     "multi_sport_detected": true,
     "strain": 356.0,
     "stress_tolerance": 8.9,
-    "load_recovery_ratio": 7.8,
+    "load_recovery_ratio": null,
     "tss_7d_total": 891.0,
-    "tss_28d_total": 2028.0,
+    "tss_28d_total": 2020.0,
     "zone_distribution_7d": {
       "z1_hours": 6.95,
       "z2_hours": 6.79,
@@ -232,12 +214,12 @@
       "sport": "cycling"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 122640,
+      "z1_seconds": 120752,
       "z2_seconds": 34799,
       "z3_seconds": 10440,
-      "z1_pct": 73.1,
-      "z2_pct": 20.7,
-      "z3_pct": 6.2,
+      "z1_pct": 72.7,
+      "z2_pct": 21.0,
+      "z3_pct": 6.3,
       "polarization_index": null,
       "classification": "Pyramidal"
     },
@@ -297,10 +279,10 @@
       "note": "No planned workouts in period"
     },
     "phase_detection": {
-      "phase": "Taper",
+      "phase": "Deload",
       "confidence": "medium",
       "reason_codes": [
-        "RACE_IMMINENT"
+        "PLAN_GAP_NEXT_WEEK"
       ],
       "basis": {
         "stream_1": {
@@ -311,23 +293,23 @@
         },
         "stream_2": {
           "planned_tss_delta": null,
-          "hard_sessions_planned": 1,
-          "race_proximity": 0,
+          "hard_sessions_planned": 0,
+          "race_proximity": null,
           "next_week_load": null,
-          "plan_coverage_current_week": 0.2,
+          "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 0.0
         },
         "data_quality": "good",
         "stream_agreement": null
       },
       "previous_phase": "Deload",
-      "phase_duration_weeks": 0,
+      "phase_duration_weeks": 2,
       "dossier_declared": null,
       "dossier_agreement": null
     },
-    "phase_detected": "Taper",
+    "phase_detected": "Deload",
     "phase_triggers": [
-      "RACE_IMMINENT"
+      "PLAN_GAP_NEXT_WEEK"
     ],
     "seasonal_context": "Build / Early Race Season",
     "benchmark_indoor": {
@@ -350,12 +332,12 @@
     "p_max": 989,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-28T23:46:37.788076",
+    "calculation_timestamp": "2026-06-29T03:31:38.199732",
     "data_quality": {
-      "hrv_data_points": 6,
+      "hrv_data_points": 5,
       "rhr_data_points": 7,
       "activities_7d": 8,
-      "activities_28d": 30,
+      "activities_28d": 29,
       "planned_workouts_7d": 1,
       "ftp_history_days": {
         "indoor": 0,
@@ -755,22 +737,6 @@
   ],
   "wellness_data": [
     {
-      "date": "2026-06-22",
-      "weight_kg": null,
-      "resting_hr": 53,
-      "hrv_rmssd": 31.0,
-      "hrv_sdnn": null,
-      "sleep_hours": 2.3,
-      "sleep_formatted": "2h18m",
-      "sleep_quality": 4,
-      "sleep_score": 15.0,
-      "mental_energy": null,
-      "fatigue": null,
-      "soreness": null,
-      "avg_sleeping_hr": null,
-      "vo2max": null
-    },
-    {
       "date": "2026-06-23",
       "weight_kg": null,
       "resting_hr": 49,
@@ -865,21 +831,25 @@
       "soreness": null,
       "avg_sleeping_hr": null,
       "vo2max": null
-    }
-  ],
-  "planned_workouts": [
+    },
     {
-      "id": 108542541,
-      "date": "2026-06-28",
-      "name": "La Marmotte",
-      "type": "RACE_B",
-      "planned_tss": null,
-      "duration_hours": 0.0,
-      "duration_formatted": "0s",
-      "workout_summary": null,
-      "description": ""
+      "date": "2026-06-29",
+      "weight_kg": null,
+      "resting_hr": 51,
+      "hrv_rmssd": null,
+      "hrv_sdnn": null,
+      "sleep_hours": null,
+      "sleep_formatted": null,
+      "sleep_quality": null,
+      "sleep_score": null,
+      "mental_energy": null,
+      "fatigue": null,
+      "soreness": null,
+      "avg_sleeping_hr": null,
+      "vo2max": null
     }
   ],
+  "planned_workouts": [],
   "workout_summary_stats": {
     "attempted": 0,
     "success": 0,
@@ -893,86 +863,17 @@
     "total_training_formatted": "20h",
     "total_tss": 891,
     "activities_count": 8,
-    "avg_hrv": 68.2,
-    "avg_resting_hr": 47.7
+    "avg_hrv": 75.6,
+    "avg_resting_hr": 47.4
   },
   "race_calendar": {
-    "next_race": {
-      "name": "La Marmotte",
-      "date": "2026-06-28",
-      "category": "RACE_B",
-      "type": "Ride",
-      "days_until": 0,
-      "moving_time_seconds": null,
-      "distance_meters": null
-    },
-    "all_races": [
-      {
-        "name": "La Marmotte",
-        "date": "2026-06-28",
-        "category": "RACE_B",
-        "type": "Ride",
-        "days_until": 0,
-        "moving_time_seconds": null,
-        "distance_meters": null
-      }
-    ],
+    "next_race": null,
+    "all_races": [],
     "taper_alert": {
       "active": false
     },
     "race_week": {
-      "active": true,
-      "event_name": "La Marmotte",
-      "event_date": "2026-06-28",
-      "event_category": "RACE_B",
-      "event_type": "Ride",
-      "event_duration_class": "medium",
-      "event_moving_time_seconds": null,
-      "days_until_event": 0,
-      "current_day": "D-0",
-      "ctl_baseline": 62.4,
-      "normal_weekly_tss": 437.0,
-      "race_week_tss_budget": {
-        "min": 218,
-        "max": 284
-      },
-      "race_week_tss_spent": 891,
-      "race_week_tss_remaining": {
-        "min": 0,
-        "max": 0
-      },
-      "projected_race_day_tsb": -82.2,
-      "tsb_target_range": {
-        "min": 5,
-        "max": 15
-      },
-      "today": {
-        "label": "Race day",
-        "load_target_tss": {
-          "min": 0,
-          "max": 0
-        },
-        "zones": "Race effort",
-        "purpose": "Go/no-go assessment. Execute race plan."
-      },
-      "carb_loading": {
-        "applicable": false,
-        "active": false,
-        "starts": "D-4",
-        "start_date": "2026-06-24",
-        "note": null
-      },
-      "opener": {
-        "day": "D-2",
-        "date": "2026-06-26",
-        "intensity": "standard"
-      },
-      "go_no_go": {
-        "tsb_status": "flag",
-        "notes": [
-          "Projected race-day TSB -82.2 is significantly below target range 5-15. Fatigue may impact performance."
-        ]
-      }
+      "active": false
     }
   }
 }
