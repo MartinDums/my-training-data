@@ -7,15 +7,15 @@
     "capability_metrics_note": "The 'capability' block in derived_metrics contains durability trend (aggregate decoupling 7d/28d), efficiency factor trend (aggregate EF 7d/28d), HRRc trend (heart rate recovery 7d/28d), and TID comparison (7d vs 28d distribution drift). These measure HOW the athlete expresses fitness, not just load. Use these for coaching context alongside traditional load metrics. Durability and EF trend direction matters more than absolute values. HRRc is display only \u2014 higher = better parasympathetic recovery.",
     "readiness_decision_note": "The 'readiness_decision' block contains a pre-computed go/modify/skip recommendation with priority level (P0=safety, P1=overload, P2=fatigue, P3=green), individual signal statuses, phase-adjusted thresholds, and structured modification guidance. Use this as the baseline for pre-workout recommendations. Override with explanation in the coach note if the AI's contextual judgment disagrees.",
     "quick_stats": {
-      "total_training_hours": 2.93,
-      "total_training_formatted": "2h55m",
-      "total_activities": 5,
+      "total_training_hours": 5.11,
+      "total_training_formatted": "5h6m",
+      "total_activities": 6,
       "total_tss": 170
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-08-06T12:17:42.439198",
+    "last_updated": "2026-08-06T14:51:33.523146",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -102,14 +102,20 @@
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 2.93,
-    "total_activities": 5,
+    "total_duration_decimal_hours": 5.11,
+    "total_activities": 6,
     "by_activity_type": {
       "Hike": {
         "duration_decimal_hours": 0.25,
         "count": 1,
         "tss": 2,
         "distance_km": 0.3
+      },
+      "RockClimbing": {
+        "duration_decimal_hours": 2.18,
+        "count": 1,
+        "tss": 0,
+        "distance_km": 0.0
       },
       "Run": {
         "duration_decimal_hours": 1.31,
@@ -358,12 +364,12 @@
     "p_max": 963,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-08-06T12:17:42.438375",
+    "calculation_timestamp": "2026-08-06T14:51:33.522379",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
-      "activities_7d": 5,
-      "activities_28d": 29,
+      "activities_7d": 6,
+      "activities_28d": 30,
       "planned_workouts_7d": 0,
       "ftp_history_days": {
         "indoor": 0,
@@ -372,6 +378,40 @@
     }
   },
   "recent_activities": [
+    {
+      "id": "i173073082",
+      "date": "2026-08-06T09:04:52",
+      "type": "RockClimbing",
+      "name": "Rock Climbing",
+      "duration_hours": 2.18,
+      "distance_km": 0.0,
+      "tss": null,
+      "intensity_factor": null,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": null,
+      "max_hr": null,
+      "avg_cadence": null,
+      "avg_speed": null,
+      "max_speed": null,
+      "avg_pace": null,
+      "avg_temp": null,
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "work_kj": null,
+      "calories": 1705,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "feel": null,
+      "rpe": null,
+      "zone_distribution": null
+    },
     {
       "id": "i173000425",
       "date": "2026-08-06T08:25:40",
@@ -735,10 +775,10 @@
     "bail_no_match": 0
   },
   "weekly_summary": {
-    "total_training_hours": 2.93,
-    "total_training_formatted": "2h55m",
+    "total_training_hours": 5.11,
+    "total_training_formatted": "5h6m",
     "total_tss": 170,
-    "activities_count": 5,
+    "activities_count": 6,
     "avg_hrv": 80.4,
     "avg_resting_hr": 46.6
   },
